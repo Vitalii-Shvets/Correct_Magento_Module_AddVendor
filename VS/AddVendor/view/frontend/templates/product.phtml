@@ -1,0 +1,13 @@
+<?php if ($block->isActive()) : ?>
+    <strong><?php echo __('Vendor(s)'); ?></strong>
+    <?php foreach ($block->getVendors() as $vendor) : ?>
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img class="vendor-icon" src="<?php echo $block->getImageUrl($vendor->getIcon()); ?>"
+                         alt="<?php echo $vendor->getName(); ?>">
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>

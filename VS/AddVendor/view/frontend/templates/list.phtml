@@ -1,0 +1,7 @@
+
+<?php if ($block->isActive()) : ?>
+    <?php foreach ($block->getVendors() as $vendor) : ?>
+        <span><strong><?php echo $block->escapeHtml($vendor->getName()) ?></strong></span>
+        <p><?php echo $vendor->getDescription() ?></p>
+    <?php endforeach; ?>
+<?php endif; ?>
